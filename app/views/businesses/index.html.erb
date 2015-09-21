@@ -21,26 +21,22 @@
   </div>
 </div>
 
-
-
-
 <div id='businesses-list'>
 
-  <% i = 0 %>
-  <% @businesses.each do |business| %>
-    <% if i==0 %>
-      <%= render html: "<div class='row'>".html_safe  %>
-    <% elsif (i > 3) && (i%4 == 0)%>
-      <%= render html: "</div><div class='row'>".html_safe  %>
-    <% end %>
+  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
-    <div class="medium-3 columns"><%= link_to business.name, business,id:'business'+business.id.to_s, remote:true, method: :get%></div>
+    <% @businesses.each do |business| %>
 
-    <% i += 1 %>
+    <li>
+      <div class='index-listing'><%= link_to business.name, business,id:'business'+business.id.to_s, remote:true, method: :get%>
+      <img class='business-image-show' src="<%= business.parseImageUrl %>">
+      </div>
+    </li>
 
-  <%end%>
-
+     <% end %>
  
+  </ul>
+
 </div>
 
 

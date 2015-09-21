@@ -28,7 +28,7 @@ html, body {
   position: relative;
 }
 
-.business-image {
+.business-image-show {
   width: 100%;
 }
 
@@ -37,3 +37,12 @@ html, body {
   overflow: hidden;
 }
 
+.index-listing {
+  height:220px;
+  width:375px;
+  background: lightgrey;
+}
+
+.index-listing img {
+ /* height: 100px;*/
+}
