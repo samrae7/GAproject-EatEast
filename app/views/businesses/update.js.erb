@@ -1,0 +1,10 @@
+console.log('updated')
+
+$('#businesses-list').html("<%= escape_javascript(render @businesses , locals: { businesses:@businesses } ) %>")
+
+
+$('#businesses-list').slideUp(200);
+$('#business-form').slideUp(200);
+$('#business-listing').slideDown(250)
+
+$('#business-listing').html("<%= j (render partial: 'listing', locals: {business: @business}) %>");

@@ -1,0 +1,4 @@
+$('#business-form').html("<%= j (render partial: 'form', locals: {business: @business}) %>");
+
+$('#business-listing').slideUp(200)
+$('#business-form').slideDown(200)

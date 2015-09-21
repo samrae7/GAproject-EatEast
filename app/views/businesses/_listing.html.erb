@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+  lat = <%= business.latitude %>;
+  long = <%= business.longitude%>;
+
+</script>
+
+<p>Name: <%= business.name%></p>
+<p>Address: <%= business.address1%></p>
+<p>Post code: <%= business.post_code%></p>
+<p>Latitude: <%= business.latitude%></p>
+<p>Longitude: <%= business.longitude%></p>
+
+
+<img src="<%= business.parseImageUrl %>">
+
+<%= link_to "Edit place", edit_business_path(business), remote: true %>
+<%= link_to "Delete place", "/businesses/#{business.id}", remote: true, method: 'delete'%>
+

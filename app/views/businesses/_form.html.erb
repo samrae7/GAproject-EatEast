@@ -1,0 +1,17 @@
+<%= form_for(business, remote: true) do |f|%>
+  <%= f.label :name%><br>
+  <%= f.text_field :name %><br>
+
+    <%= f.label :address1%><br>
+  <%= f.text_field :address1 %><br>
+
+    <%= f.label :city%><br>
+  <%= f.text_field :city %><br>
+
+    <%= f.label :post_code%><br>
+  <%= f.text_field :post_code %><br>
+
+    <%= f.label :display_phone%><br>
+  <%= f.text_field :display_phone %><br>
+  <%= f.submit %>
+<%end%>
