@@ -17,6 +17,8 @@ def get_restaurants restaurantsJSON
     
     restaurant['yelp_id'] = restaurant.delete('id')
 
+    # possible_cusines = ['Chinese, dim sum, asian fusion', '']
+
     extraData = {
 
       'address1' => restaurant['location']['address'][0].to_s,
@@ -27,7 +29,8 @@ def get_restaurants restaurantsJSON
       'latitude' => restaurant['location']['coordinate']['latitude'],
       'longitude' => restaurant['location']['coordinate']['longitude'],
 
-      'categories' => restaurant['categories'].flatten.to_s
+      'categories' => restaurant['categories'].flatten.to_s.delete('\[]\"'),
+      'cuisine'=>'Chinese, dim sum, asian fusion'
 
     }
 
@@ -57,7 +60,7 @@ liverpool_street_array = get_restaurants restaurants_liverpool_street
 all_restaurants = (brick_lane_array + whitechapel_array + spitalfields_array + liverpool_street_array).uniq!
 
 all_restaurants.each do |restaurant| 
-    Business.create(restaurant)
+  Business.create(restaurant)
 end
 
 

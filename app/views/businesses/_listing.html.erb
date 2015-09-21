@@ -5,15 +5,33 @@
 
 </script>
 
-<p>Name: <%= business.name%></p>
-<p>Address: <%= business.address1%></p>
-<p>Post code: <%= business.post_code%></p>
-<p>Latitude: <%= business.latitude%></p>
-<p>Longitude: <%= business.longitude%></p>
+
+<div class="row top-row">
+  <div class="small-12 large-4 large-offset-1 columns">
+    <div class='listing-box'>
+      <!-- <h2><%#= business.name%></h2>
+      <p><%#= business.address1%><br>
+      <%#= business.post_code%></p>
+      
+      <%#= link_to "Delete", "/businesses/#{business.id}", remote: true, method: 'delete'%> -->
+    
 
 
-<img src="<%= business.parseImageUrl %>">
+<ul class="pricing-table">
+  <li class="title"><%= business.name%></li>
+<!--   <li class="description">An awesome description</li> -->
+  <li class="bullet-item"><%= business.address1%> <%= business.post_code%></li>
+  <li class="bullet-item"><%= business.cuisine%></li>
+  <li class="bullet-item"><%= business.takeaway%><%= business.delivers%></li>
+  <li class="cta-button"><%= link_to "Edit", edit_business_path(business), remote: true, class:'button' %></li>
+</ul>
 
-<%= link_to "Edit place", edit_business_path(business), remote: true %>
-<%= link_to "Delete place", "/businesses/#{business.id}", remote: true, method: 'delete'%>
+</div>
+
+
+  </div>
+  <div class="small-12 large-5 columns end"><img class='business-image' src="<%= business.parseImageUrl %>"></div>
+</div>
+
+
 
