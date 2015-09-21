@@ -30,7 +30,9 @@ def get_restaurants restaurantsJSON
       'longitude' => restaurant['location']['coordinate']['longitude'],
 
       'categories' => restaurant['categories'].flatten.to_s.delete('\[]\"'),
-      'cuisine'=>'Chinese, dim sum, asian fusion'
+      'takeaway' => true,
+      'delivers' => false,
+      'veg_friendly'=> true
 
     }
 
