@@ -7,10 +7,20 @@
   display:none;
 }
 
+#business-form {
+  width: 40%;
+  margin: 0 auto;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.page-wrapper {
+  width:90%;
+  margin: 0 auto;
 }
 
 #map-box {
@@ -38,11 +48,54 @@ html, body {
 }
 
 .index-listing {
-  height:220px;
-  width:375px;
+  height:230px;
+  width:330px;
   background: lightgrey;
+/*  overflow:hidden;*/
 }
 
-.index-listing img {
- /* height: 100px;*/
+.index-listing a {
+  color: black;
+  font-size: 1.1em;
+}
+
+.index-listing a:hover {
+  color:#008CBA;
+}
+
+.text-container {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.index-listing .image-container {
+  height: 190px;
+  overflow:hidden;
+}
+
+input[type=submit] {
+
+-webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem 1.0625rem 2rem;
+    font-size: 1rem;
+    background-color: #008CBA;
+    border-color: #007095;
+    color: #FFFFFF;
+    transition: background-color 300ms ease-out;
+
+
+
 }
