@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918211644) do
+ActiveRecord::Schema.define(version: 20150922124939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20150918211644) do
     t.string   "address2"
     t.string   "address3"
     t.string   "post_code"
-    t.decimal  "latitude"
-    t.decimal  "longitude"
+    t.decimal  "latitude",      default: 51.5073
+    t.decimal  "longitude",     default: 0.1276
     t.string   "categories"
     t.string   "yelp_id"
     t.boolean  "veg_friendly"

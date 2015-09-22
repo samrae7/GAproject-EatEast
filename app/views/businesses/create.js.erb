@@ -1,9 +1,14 @@
-// $("<%= escape_javascript(render @business) %>").appendTo("#businesses-list");
 
+
+console.log('create')
+
+// debugger;
 $('#businesses-list').html("<%= escape_javascript(render @businesses , locals: { businesses:@businesses } ) %>")
 
 $('#business-listing').html("<%= j (render partial: 'listing', locals: {business: @business}) %>");
 
 $("#business-form").slideUp(200);
 $("#business-listing").slideDown(200);
+
+
 

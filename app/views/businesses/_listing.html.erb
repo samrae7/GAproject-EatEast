@@ -1,29 +1,23 @@
 <script type="text/javascript">
-
-  lat = <%= business.latitude %>;
-  long = <%= business.longitude%>;
-
+  var lat = <%= business.latitude %>;
+  var long = <%= business.longitude%>;
 </script>
 
 
 <div class="row top-row">
   <div class="small-12 large-4 large-offset-1 columns">
-    <!-- <div class='listing-box'> -->
-      <!-- <h2><%#= business.name%></h2>
-      <p><%#= business.address1%><br>
-      <%#= business.post_code%></p>
       
-      <%#= link_to "Delete", "/businesses/#{business.id}", remote: true, method: 'delete'%> -->
+      <%#= link_to "Delete", "/businesses/#{business.id}", remote: true, method: 'delete'%>
       <ul class="pricing-table">
         <li class="title"><%= business.name%></li>
       <!--   <li class="description">An awesome description</li> -->
         <li class="bullet-item"><%= business.address1%> <%= business.post_code%></li>
         <li class="bullet-item">Tel: <%= business.display_phone%></li>
-        <li class="bullet-item"><%= business.getCuisine%></li>
+  <li class="bullet-item"><%= business.getCuisine%></li>
         <li class="bullet-item"><%=business.takeawayMessage%></li>
         <li class="bullet-item"><%=business.vegOptions%></li>
       </ul>
-<!-- </div> -->
+
   </div>
   <div class="small-12 large-5 columns"><img class='business-image-show' src="<%= business.parseImageUrl %>"></div>
   <div class="small-12 large-2 columns"><%= link_to "Edit", edit_business_path(business), remote: true, class:'button' %></div>

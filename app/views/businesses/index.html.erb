@@ -28,10 +28,9 @@
       <li>
         <div class='index-listing'>
         <div class='image-container'>
-          <!-- <img class='business-image-show' src="<%#= business.parseImageUrl %>"> -->
+       
           <%= link_to image_tag(business.parseImageUrl, :class => "business-image-show") +'some text', business, remote:true, method: :get %>
         </div>
-        <!--     <%#= image_tag(business.parseImageUrl, :class => "business-image-show") %> -->
 
         <!-- link helper that also assigns an individual id to each link on the page -->
         <div class='text-container'>

@@ -13,19 +13,35 @@ class Business < ActiveRecord::Base
   end
 
   def getCuisine
-    cuisine = self.categories.split(',')[0]
+    if categories
+      cuisine = self.categories.split(',')[0]
+    elsif categories == nil
+      cuisine = 'chinese'
+    end
   end
 
   def deliveryMessage
-    self.delivers ? 'and delivery available' : 'but no delivery service'
+    if delivers
+      self.delivers ? 'and delivery available' : 'but no delivery service'
+    else
+      return ' '
+    end
   end
 
   def takeawayMessage
-    self.takeaway ? 'Takeaway ' + self.deliveryMessage : 'No takeaway'
+    if takeaway
+      self.takeaway ? 'Takeaway ' + self.deliveryMessage : 'No takeaway'
+    elsif categories == nil
+      return 'No takeaway'
+    end
   end
 
   def vegOptions
-    self.veg_friendly ? 'Vegetarian options available' : 'No vegetarian options'
+    if veg_friendly
+      self.veg_friendly ? 'Vegetarian options available' : 'No vegetarian options'
+    else
+      return ' '
+    end
   end
 
 end
