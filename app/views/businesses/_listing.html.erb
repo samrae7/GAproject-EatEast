@@ -22,9 +22,9 @@
   <div class="small-12 large-5 columns">
     <img class='business-image-show' src="<%= business.parseImageUrl %>">
   </div>
-  <div class="small-12 large-2 columns"><%= link_to "Edit", edit_business_path(business), remote: true, class:'button' %>
+  <div class="small-12 large-2 columns"><%= link_to "Edit  ", edit_business_path(business), remote: true, class:'button' %>
   <%= link_to "Delete", business_path(business), remote: true, method:'delete', class:'button' %>
-  <%= link_to "Like", business_likes_path(business), method:'post', class:'button' %>
+  <%= link_to "Like  ", business_likes_path(business), method:'post', class:'button' %>
   </div>
 </div>
 
