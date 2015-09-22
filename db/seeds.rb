@@ -68,7 +68,11 @@ all_restaurants.each do |restaurant|
   # place.reviews.create(notes:'Espresso, cream macchiato affogato, mocha that cup aftertaste pumpkin spice variety french press. Trifecta, chicory, wings french press, skinny galão, medium dripper coffee aged café au lait.')
 end
 
-Business.all.each do |business| business.reviews.create(notes: 'Espresso, cream macchiato affogato, mocha that cup aftertaste pumpkin spice variety french press. Trifecta, chicory, wings french press, skinny galo, medium dripper coffee aged caf au lait.')
+Business.all.each do |business|
+
+  business.reviews.create(notes: '"Espresso, cream macchiato affogato, mocha that cup aftertaste pumpkin spice variety french press. Trifecta, chicory, wings french press, skinny galo, medium dripper coffee aged caf au lait."')
+
+  business.reviews.create(notes: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu justo quam. Sed metus justo, luctus in gravida sed, consequat sit amet turpis. Aenean vitae vulputate libero, et placerat tortor."')
 end
 
 

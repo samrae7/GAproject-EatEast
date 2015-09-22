@@ -39,7 +39,7 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
     @businesses =  Business.all.order(updated_at: :desc)
 
-    respond_to  do |format|
+    respond_to do |format|
 
       if @business.update(business_params)
         format.js   {}
@@ -53,7 +53,8 @@ class BusinessesController < ApplicationController
   def destroy
      @business = Business.find(params[:id]).destroy
      @businesses =  Business.all.order(updated_at: :desc)
-     respond_to  do |format|
+     redirect_to '/', status: 303
+     respond_to do |format|
         format.js   {}
      end
   end

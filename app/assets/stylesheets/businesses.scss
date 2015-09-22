@@ -95,7 +95,27 @@ input[type=submit] {
     border-color: #007095;
     color: #FFFFFF;
     transition: background-color 300ms ease-out;
-
-
-
 }
+
+.reviews-container {
+  border: 1px #DDDDDD dotted;
+  height: 180px;
+  overflow:scroll;
+  padding:5px;
+}
+
+.reviews-container p {
+  font-size: 0.875rem;
+}
+
+.reviews-container h4 {
+  font-size: 1rem;
+}
+
+.ratings-top-li {
+  border-top:none;
+}
+
+
+
+

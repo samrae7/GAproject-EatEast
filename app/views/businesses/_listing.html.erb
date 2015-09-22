@@ -6,32 +6,44 @@
 
 <div class="row top-row">
   <div class="small-12 large-4 large-offset-1 columns">
-      
-      <%#= link_to "Delete", "/businesses/#{business.id}", remote: true, method: 'delete'%>
-      <ul class="pricing-table">
-        <li class="title"><%= business.name%></li>
-      <!--   <li class="description">An awesome description</li> -->
-        <li class="bullet-item"><%= business.address1%> <%= business.post_code%></li>
-        <li class="bullet-item">Tel: <%= business.display_phone%></li>
-  <li class="bullet-item"><%= business.getCuisine%></li>
-        <li class="bullet-item"><%=business.takeawayMessage%></li>
-        <li class="bullet-item"><%=business.vegOptions%></li>
-      </ul>
+    
+    <%#= link_to "Delete", "/businesses/#{business.id}", remote: true, method: 'delete'%>
+    <ul class="pricing-table">
+      <li class="title"><%= business.name%></li>
+    <!--   <li class="description">An awesome description</li> -->
+      <li class="bullet-item"><%= business.address1%> <%= business.post_code%></li>
+      <li class="bullet-item">Tel: <%= business.display_phone%></li>
+      <li class="bullet-item"><%= business.getCuisine%></li>
+      <li class="bullet-item"><%=business.takeawayMessage%></li>
+      <li class="bullet-item"><%=business.vegOptions%></li>
+    </ul>
 
   </div>
   <div class="small-12 large-5 columns">
     <img class='business-image-show' src="<%= business.parseImageUrl %>">
   </div>
   <div class="small-12 large-2 columns"><%= link_to "Edit", edit_business_path(business), remote: true, class:'button' %>
+  <%= link_to "Delete", business_path(business), remote: true, method:'delete', class:'button' %>
+  <%= link_to "Like", business_likes_path(business), method:'post', class:'button' %>
   </div>
 </div>
 
 <div class="row">
- <div class="small-12 large-4 large-offset-1 columns">
-    <ul class="pricing-table reviews-table">
-      <li class="title">Reviews</li>
-      <li class="bullet-item"><%= business.reviews[0].notes%> </li>
+  <div class="small-12 large-4 large-offset-1 columns">
+    <ul class="pricing-table">
+      <li class="bullet-item ratings-top-li">Likes: <%= business.likes.count %></li>
+      <li class="bullet-item">Food rating: 4</li>
+      <li class="bullet-item">Service rating: 2</li>
+      <li class="bullet-item">Value rating: 3</li>
     </ul>
+  </div>
+  <div class="small-12 large-5 columns end">
+    <div class='reviews-container'>
+    <h4>Reviews</h4>
+    <%business.reviews.each do |review|%>
+      <p><%=review.notes%></p>
+    <%end%>
+    </div>
   </div>
 </div>
 
