@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Review.delete_all
+Like.delete_all
 Business.delete_all
 
 def get_restaurants restaurantsJSON
@@ -63,6 +65,10 @@ all_restaurants = (brick_lane_array + whitechapel_array + spitalfields_array + l
 
 all_restaurants.each do |restaurant| 
   Business.create(restaurant)
+  # place.reviews.create(notes:'Espresso, cream macchiato affogato, mocha that cup aftertaste pumpkin spice variety french press. Trifecta, chicory, wings french press, skinny galão, medium dripper coffee aged café au lait.')
+end
+
+Business.all.each do |business| business.reviews.create(notes: 'Espresso, cream macchiato affogato, mocha that cup aftertaste pumpkin spice variety french press. Trifecta, chicory, wings french press, skinny galo, medium dripper coffee aged caf au lait.')
 end
 
 

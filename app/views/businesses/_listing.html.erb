@@ -19,9 +19,22 @@
       </ul>
 
   </div>
-  <div class="small-12 large-5 columns"><img class='business-image-show' src="<%= business.parseImageUrl %>"></div>
-  <div class="small-12 large-2 columns"><%= link_to "Edit", edit_business_path(business), remote: true, class:'button' %></div>
+  <div class="small-12 large-5 columns">
+    <img class='business-image-show' src="<%= business.parseImageUrl %>">
+  </div>
+  <div class="small-12 large-2 columns"><%= link_to "Edit", edit_business_path(business), remote: true, class:'button' %>
+  </div>
 </div>
+
+<div class="row">
+ <div class="small-12 large-4 large-offset-1 columns">
+    <ul class="pricing-table reviews-table">
+      <li class="title">Reviews</li>
+      <li class="bullet-item"><%= business.reviews[0].notes%> </li>
+    </ul>
+  </div>
+</div>
+
 
 
 
