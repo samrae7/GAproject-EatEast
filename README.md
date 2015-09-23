@@ -70,7 +70,7 @@ See wireframes
 
 ##Problems
 
-* I tried to make a single-page app using AJAX requests to get data on the page. I ended up with lots of ..js.erb files in my views folder and a confusing set of actions. This should be rewritten, first as html pages and then as ajax using .ajax or $.get and with all the JS in one file in the assets folder. This is why the edit and like buttons do not take the user to a view that shows their updated info ( you have to refesh).
+I tried to make a single-page app using AJAX requests to get data on the page. I ended up with lots of ..js.erb files in my views folder and a confusing set of actions. This should be rewritten, first as html pages and then as ajax using .ajax or $.get and with all the JS in one file in the assets folder. This is why the edit and like buttons do not take the user to a view that shows their updated info ( you have to refesh).
 
 The single app is also annoyiong because it breaks the back button. It's also unecessry the way I have it designed currently because there's no information that needs to be dynmaically added to a page (ie you could just go to another page).
 
@@ -84,7 +84,8 @@ Functionality still to do
 5. Allow upload of images
 6. Get lat and long from entered postcode
 
-
+##Trello board for this project
+https://trello.com/b/sqAFNTCk/ga-eateast-project
 
 ##Sample data (for presentation)
 
