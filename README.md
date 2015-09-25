@@ -34,6 +34,8 @@ See wireframes
 
 2 At first I had a users model which I took out because I realised that nested routes eg, '/users/user_id/businesses/business_id' wouldn't be the way that sites would work out whic user you were in practice, so I changed it to three models (business, review, like) where there is only one user.
 
+3. I used RSPEC to test and build my Business model at  first
+
 ##Table columns
 
 ###Business
@@ -69,12 +71,15 @@ See wireframes
 * service_rating
 
 ##Problems
+When you create a new listing and then click 'show all' you get a bullet list instead of the normal index page.
+
+When you delete an item it take you back to the index but the element is not deleted from it, although that item has been deleted from the database.
 
 I tried to make a single-page app using AJAX requests to get data on the page. I ended up with lots of ..js.erb files in my views folder and a confusing set of actions. This should be rewritten, first as html pages and then as ajax using .ajax or $.get and with all the JS in one file in the assets folder. This is why the edit and like buttons do not take the user to a view that shows their updated info ( you have to refesh).
 
 The single app is also annoyiong because it breaks the back button. It's also unecessry the way I have it designed currently because there's no information that needs to be dynmaically added to a page (ie you could just go to another page).
 
-Functionality still to do
+##Functionality still to do for MVP
 
 1. Fix the above - start again and create new controller actions for Business model.
 2. Allow user to add a review and ratings
@@ -84,17 +89,18 @@ Functionality still to do
 5. Allow upload of images
 6. Get lat and long from entered postcode
 
+##Further functionality
+1. Rankings page showing how many likes each restaurant has 
+
 ##Trello board for this project
 https://trello.com/b/sqAFNTCk/ga-eateast-project
 
-##Sample data (for presentation)
+Things yo look at 
 
-Nandos
-Commercial Street
-London
-E1 6NF
-020 7650 7775
-
+* Cloudinary - gem for image uploads. Works with carrier wave gem
+* Look at Paco's project for how he did google maps
+* Gon - gem for passing ruby variables to JS
+* Look at Ambarr's project to see good example of liking functionality
 
 
 

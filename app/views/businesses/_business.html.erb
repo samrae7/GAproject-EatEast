@@ -1,1 +1,14 @@
-<li><%= link_to business.name, business,id:'business'+business.id.to_s, remote:true, method: :get%> </li>
+<!-- <li><%#= link_to business.name, business,id:'business'+business.id.to_s, remote:true, method: :get%> </li> -->
+
+      <li data-id="<%= business.id %>">
+        <div class='index-listing'>
+        <div class='image-container'>
+       
+          <%= link_to image_tag(business.parseImageUrl, :class => "business-image-show") +'some text', business, remote:true, method: :get %>
+        </div>
+
+        <!-- link helper that also assigns an individual id to each link on the page -->
+        <div class='text-container'>
+        <%= link_to business.name, business, id:'business'+business.id.to_s, remote:true, method: :get %>
+        </div>
+      </li>

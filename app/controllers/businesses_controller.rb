@@ -21,7 +21,7 @@ class BusinessesController < ApplicationController
    
     respond_to do |format|
       if @business.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @business, notice: 'User was successfully created.' }
         format.js   {}
         format.json { render json: @business, status: :created, location: @business }
       else
@@ -53,7 +53,7 @@ class BusinessesController < ApplicationController
   def destroy
      @business = Business.find(params[:id]).destroy
      @businesses =  Business.all.order(updated_at: :desc)
-     redirect_to '/', status: 303
+     # redirect_to '/', status: 303
      respond_to do |format|
         format.js   {}
      end

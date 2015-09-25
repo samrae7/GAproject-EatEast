@@ -2,6 +2,8 @@ console.log('destroy view')
 
 $('#businesses-list').html("<%= escape_javascript(render @businesses , locals: { businesses:@businesses } ) %>")
 
+
+
 $('#business-listing').slideUp(200);
 $('#business-form').slideUp(200);
 $('#businesses-list').slideDown(250);

@@ -12,13 +12,13 @@
     </div>
   </div>
 
-  <div id='businesses-list'>
+  <div>
 
-    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+    <ul id='businesses-list' class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
       <% @businesses.each do |business| %>
 
-      <li>
+      <li data-id="<%= business.id %>">
         <div class='index-listing'>
         <div class='image-container'>
        

@@ -7,7 +7,6 @@
 <div class="row top-row">
   <div class="small-12 large-4 large-offset-1 columns">
     
-    <%#= link_to "Delete", "/businesses/#{business.id}", remote: true, method: 'delete'%>
     <ul class="pricing-table">
       <li class="title"><%= business.name%></li>
     <!--   <li class="description">An awesome description</li> -->
@@ -23,15 +22,15 @@
     <img class='business-image-show' src="<%= business.parseImageUrl %>">
   </div>
   <div class="small-12 large-2 columns"><%= link_to "Edit  ", edit_business_path(business), remote: true, class:'button update-button' %>
-  <%= link_to "Delete", business_path(business), remote: true, method:'delete', class:'button update-button' %>
-  <%= link_to "Like  ", business_likes_path(business), method:'post', class:'button update-button' %>
+  <%= link_to "Delete", business_path(business), remote: true, method:'delete', class:'button update-button', id: "delete", data: { id: business.id } %>
+  <%= link_to "Like  ", business_likes_path(business), remote: true, method:'post', class:'button update-button' %>
   </div>
 </div>
 
 <div class="row">
   <div class="small-12 large-4 large-offset-1 columns">
     <ul class="pricing-table">
-      <li class="bullet-item ratings-top-li">Likes: <%= business.likes.count %></li>
+      <li class="bullet-item ratings-top-li" id='likes-li'>Likes: <%= business.likes.count %></li>
       <li class="bullet-item">Food rating: 4</li>
       <li class="bullet-item">Service rating: 2</li>
       <li class="bullet-item">Value rating: 3</li>
