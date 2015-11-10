@@ -29,6 +29,8 @@ gem 'foundation-rails'
 
 gem 'rails_12factor', group: :production
 
+gem 'puma'
+
 ruby "2.2.0"
 
 # Use ActiveModel has_secure_password
