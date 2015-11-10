@@ -13,6 +13,7 @@ class BusinessesController < ApplicationController
 
   def show
     @business = Business.find(params[:id])
+    puts 'OH HELLO"
   end
 
   def create
