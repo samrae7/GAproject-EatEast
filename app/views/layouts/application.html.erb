@@ -11,8 +11,7 @@
     <%= javascript_include_tag "application"%>
     <%= csrf_meta_tags %>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['MAPS_API']%>&callback=initMap"">
-    </script>
+    
   </head>
 
   <body>
@@ -38,6 +37,7 @@
   </nav>
 
     <%= yield %>
-
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['MAPS_API']%>&callback=initMap"">
+    </script>
   </body>
 </html>

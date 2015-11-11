@@ -21,3 +21,7 @@
 
 
 $(function(){ $(document).foundation(); });
+
+function initMap() {
+  console.log("Map loaded")
+}
