@@ -8,7 +8,10 @@ class Business < ActiveRecord::Base
   validates :city, presence: true
 
   def parseImageUrl
-    smallUrl = self.image_url
+    url =  self.image_url
+
+    smallUrl = (url.include? 'yelpcdn.com') ? url.insert(4,'s') : url
+
     largeUrl = (smallUrl.include? 'yelpcdn.com') ? (smallUrl.chomp('ms.jpg') +'l.jpg') : smallUrl
   end
 
