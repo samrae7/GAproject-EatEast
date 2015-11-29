@@ -71,19 +71,15 @@ See wireframes
 * service_rating
 
 ##Problems
-When you create a new listing and then click 'show all' you get a bullet list instead of the normal index page.
+I tried to make a single-page app using AJAX requests to get data on the page. I ended up with lots of ..js.erb files in my views folder and a confusing set of actions. This should be rewritten, first as html pages and then as ajax using .ajax or $.get and with all the JS in one file in the assets folder.
 
-When you delete an item it take you back to the index but the element is not deleted from it, although that item has been deleted from the database.
-
-I tried to make a single-page app using AJAX requests to get data on the page. I ended up with lots of ..js.erb files in my views folder and a confusing set of actions. This should be rewritten, first as html pages and then as ajax using .ajax or $.get and with all the JS in one file in the assets folder. This is why the edit and like buttons do not take the user to a view that shows their updated info ( you have to refesh).
-
-The single app is also annoyiong because it breaks the back button. It's also unecessry the way I have it designed currently because there's no information that needs to be dynmaically added to a page (ie you could just go to another page).
+The single app is also annoyiong because it breaks the back button. It's also unecessry the way I have it designed currently because there's no information that needs to be dynmaically added to a page (ie you could just load a new  page).
 
 ##Functionality still to do for MVP
 
 1. Fix the above - start again and create new controller actions for Business model.
-2. Allow user to add a review and ratings
-3. Put average ratings on the page dynamically ( write methods in the review model)
+2. Allow user to add a review to a listing
+3. Put average ratings on the page dynamically ( write methods in the 'review' model)
 4. Add restaurant website to show page
 5. Allow user to add image_url, website and latitude and longitude when adding a listing.
 5. Allow upload of images
