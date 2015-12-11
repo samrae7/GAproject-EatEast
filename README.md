@@ -2,6 +2,8 @@
 
 An app to help people who live, work or study in East London find a delicious and good value lunch
 
+[Launch demo](eateast.herokuapp.com)
+
 ##Basic functionality
 
 * Browse restaurants, pubs, bars and cafes and view details, based on preferences
